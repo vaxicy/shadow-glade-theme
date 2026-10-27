@@ -41,7 +41,9 @@ def hx(vals):
 INK = hx(_C["frame"])                              # #202734
 SLATE = hx(_C["toolbar"])                          # #36415A
 SAGE = hx(_C["ntp_header"])                        # #B7D894
-MINT = hx(_C["ntp_background"])                    # #E0F8C7
+# the page background was desaturated to a greige, so the mark keeps the palette
+# mint explicitly instead of following ntp_background (2026-10-27)
+MINT = "#E0F8C7"
 DEEP_GREEN = hx(_C["ntp_link"])                    # #2F5D3A
 INK_T = hx(_C["ntp_text"])                         # #22302A
 
