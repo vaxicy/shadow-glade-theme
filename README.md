@@ -93,7 +93,6 @@ Ready to paste into the store listing (also kept in `store-assets/store-descript
 | `scripts/generate-screenshot-headless.py` | Regenerate the browser mockup via Playwright |
 | `scripts/generate-screenshot-2-palette.py` | Regenerate the palette screenshot |
 | `scripts/generate-promo.py` | Regenerate both promo tiles (1400×560 window hero, 440×280 dot palette) |
-| `logo/candidates/` | Candidate previews and light/dark contact sheets |
 | `LICENSE` | Non-Commercial License (English / 中文) |
 
 ## Regenerating assets
