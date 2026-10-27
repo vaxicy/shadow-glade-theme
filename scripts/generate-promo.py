@@ -157,15 +157,8 @@ def compose_window(size=(1400, 560)):
         cx += draw_chip(d, cx, cy, 34, lab, f_chip, SHELL, DEEP) + 12
     assert cx - 12 <= wx0 - 24, "chip row collides with card"
 
-    # five-swatch legend on a cream shelf: the two navy swatches would otherwise
-    # disappear into the dark ground (this palette's frame is nearly the ground)
-    sx, sy = M, 300
-    shelf = (sx - 13, sy - 13, sx + 5 * 46 - 12 + 13, sy + 34 + 13)
-    d.rounded_rectangle(shelf, radius=17, fill=SHELL)
-    for i, col in enumerate((FRAME, TOOLBAR, BTN, BTN2, PAGE)):
-        d.rounded_rectangle([sx + i * 46, sy, sx + i * 46 + 34, sy + 34], radius=10, fill=col)
-    assert sx + 5 * 46 <= wx0 - 24, "legend collides with card"
-
+    # the swatch legend was removed (user request 2026-10-27): the window card
+    # already carries the palette, and the shelf competed with the CTA.
     cta(d, M, 372, 210, 54, SHELL, DEEP)
     assert 372 + 54 <= H - 60, "CTA too close to the bottom"
     return img, {"card": (wx0, wy0, wx1 - wx0, wy1 - wy0), "cta": (M, 372, 210, 54)}
@@ -196,7 +189,7 @@ def compose_dots(size=(440, 280)):
     r, gap = 11, 12
     total = len(dots) * 2 * r + (len(dots) - 1) * gap
     x0 = (W - total) // 2
-    y0 = 158
+    y0 = 174
     shadow = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     sd = ImageDraw.Draw(shadow)
     for i in range(len(dots)):
@@ -212,7 +205,7 @@ def compose_dots(size=(440, 280)):
 
     f_cta = font(13, True)
     cw, ch = 128, 34
-    bx, by = (W - cw) // 2, 196
+    bx, by = (W - cw) // 2, 208
     d.rounded_rectangle([bx, by, bx + cw, by + ch], radius=ch // 2, fill=DEEP)
     label = "Try It Now"
     d.text((bx + (cw - text_w(d, label, f_cta)) // 2, by + (ch - f_cta.size) // 2 - 3),

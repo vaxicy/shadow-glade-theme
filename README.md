@@ -16,7 +16,7 @@
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/vaxicy/shadow-glade-theme/main/store-assets/promo/1400x560.png" alt="Shadow Glade Theme promo" width="700">
+  <img src="https://raw.githubusercontent.com/vaxicy/shadow-glade-theme/main/store-assets/promo/1400x560.png?v=2\" alt="Shadow Glade Theme promo" width="700">
 </p>
 
 ## Overview
